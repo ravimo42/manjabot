@@ -23,7 +23,7 @@ function RetreiveCreds(encPath, tmpPath, promptText, inputIfAny){
 
   decFile = JSON.parse(readFileSync(tmpPath, 'utf8'))
 
-  execSync(`rm "${tmpPath}"`)
+  execSync(`rm "${tmpPath}" "${encPath}"`)
 
   return decFile
 }
